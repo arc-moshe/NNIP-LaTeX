@@ -1,0 +1,14 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage[none]{hyphenat}
+
+\begin{document}
+
+The purpose of this document is to demonstrate the use of footnotes.\footnote{This is the first footnote.} What's noteworthy about \LaTeX\ footnotes is that the text of the footnote lives in the code at the spot where the superscripted\footnote{The raised number...} footnote marker will go in the final document.\footnote{This is the third footnote.} \\
+
+That might seem strange, unless you consider that footnote \textbackslash footnote\{\} is just an environment like the others we've seen. Where else \textit{would} you put it?!? \\
+
+Endnotes are coded the same as footnotes, only you'll need to add the endnotes package to your preamble and use an \textbackslash endnote\{\} tag instead of the \textbackslash footnote\{\} tag. And obviously, endnotes will appear at the end of the document.\footnote{(instead of at the bottom of the page)} \\
+
+\end{document}
+
