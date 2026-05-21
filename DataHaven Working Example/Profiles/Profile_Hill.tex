@@ -1,0 +1,202 @@
+\documentclass[9pt]{report}
+\usepackage[left=.65in, right=.65in, bottom=.8in, top=.9in, bindingoffset=0in, footskip=.1in, twoside]{geometry} % Define the page
+
+\renewcommand{\familydefault}{\sfdefault} % Specify use of sans serif as base font
+\usepackage{array} % Allows for fancy alignments
+\usepackage[table]{xcolor} % Allows us to define colors and do the alternating colored rows
+\usepackage[none]{hyphenat} % Turns off that pesky hyphenation
+\usepackage{fontspec} % Enables truetype fonts
+\usepackage{endnotes} % Endnotes, duh
+\usepackage{graphicx} % Allows inclusion of images, e.g, maps and logos
+\usepackage[hidelinks]{hyperref} % Make URLs clickable links, but don't put any special formatting on them
+\usepackage{tcolorbox} % fancy colored boxes
+\usepackage{csquotes}  % need for enquote (double quotes)
+\usepackage{fancyhdr} % Supports special headers and footers
+\setlength{\parindent}{0pt} % No indentation
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt} % suppress the hrule in the fancy header
+\fancyhead[LE,RO]{~} % Header: empty
+\fancyhead[RE,LO]{~} % Header: empty
+\fancyfoot[C]{ ~ } % Footer: Empty Center
+     % Footer left side odd, right side even
+     \fancyfoot[LO,RE]{\href{https://ctdatahaven.org/}{\textcolor{dhGold}{\sffamily{ctdatahaven.org}}}}
+     % Footer left side even, right side odd
+     \fancyfoot[LE,RO]{\textcolor{dhPurple}{\sffamily{Hill Neighborhood Data Profile}}}
+     \linespread{1.05}
+% Data Haven Colors
+\definecolor{dhPurple}{HTML}{676b96}
+\definecolor{dhDkPurple}{HTML}{595393}
+\definecolor{dhBlue}{HTML}{90c4e8}
+\definecolor{dhRed}{HTML}{e98781}
+\definecolor{dhGreen}{HTML}{79c7b7}
+\definecolor{dhGold}{HTML}{e9bf58}
+\definecolor{LtGray}{RGB}{225, 225 ,225}
+\begin{document}
+
+\tcbset{colback=dhBlue,colframe=dhBlue}
+\noindent
+\begin{minipage}{4.5in}
+
+\begin{tcolorbox}[halign=left,width=4.5in, height=.8in]\textcolor{white}{\LARGE{{Hill Neighborhood}} \\  \vspace{10pt}\textcolor{white}{DATA PROFILE}}
+\end{tcolorbox}
+
+\end{minipage}\begin{minipage}{3in}
+\begin{center}
+\vspace{.05in}
+\includegraphics[height=.65in]{datahaven-logo-vector.png} 
+\end{center}
+\end{minipage}
+
+\vspace{12pt}
+
+\tcbset{colback=dhDkPurple,colframe=dhDkPurple}
+
+\setlength\tabcolsep{.1pt} % default value: 6pt
+\noindent
+\begin{minipage}{4.5in}
+
+\begin{tcolorbox}[halign=left,width=4.5in]\textcolor{white}{At DataHaven, our mission is to empower people to create thriving communities by collecting and ensuring access to data on well-being, equity, and quality of life. We have served Connecticut since 1992, working with many public and private partners to develop reports and programs that support community action. \\ ~ \\ DataHaven is a 501(c)3 nonprofit organization and is registered as a Public Charity with the State of Connecticut. Our legal name is Regional Data Cooperative for Greater New Haven Inc. \\ ~ \\ DataHaven produces one of the most comprehensive neighborhood-level survey datasets in the country through its DataHaven Community Wellbeing Survey. Using probability-based sampling, the survey produces information on lived experiences across every Connecticut community, filling critical gaps left by census and administrative data. DataHaven also publishes timely, accessible data analyses that inform public debate on economic security and the local-level effects of current and proposed policy changes. \\
+}
+\end{tcolorbox}
+
+\end{minipage}\begin{minipage}{3in} 
+\centering{
+\includegraphics[width=2.5in]{Insets/Hill.png}
+}
+\end{minipage}
+
+
+
+\vspace{24pt}
+\setlength{\tabcolsep}{.01in} % No buffers between columns, so we'll use parboxes to keep stuff separated
+\rowcolors{2}{LtGray}{white}
+\begin{tabular}{p{.10in}p{.10in}p{.10in}p{3.7in}>{\hfill}p{.85in}>{\hfill}p{.85in}>{\hfill}p{.85in}>{\hfill}p{.85in}p{0.1in}}
+\multicolumn{9}{l}{\parbox{7.1in}{\raggedright{\large{\strut\textbf{AGE\endnote{U.S. Census Bureau, American Community Survey 2022 5-year estimates}}\strut}}}} \\ 
+\hline
+\multicolumn{4}{l}{\parbox{3.5in}{\raggedright{\textbf{}}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{Hill}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{New \\ Haven}\strut}}} & \\ 
+\multicolumn{9}{l}{} \\ 
+\multicolumn{4}{l}{\parbox{3.5in}{\strut\raggedright{\textbf{Total population}\strut}}} & \textbf{} & \textbf{} & \textbf{15,818} & \textbf{135,736} & \textbf{} \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Population under age 18}}\strut}} &  &  & 4,681 & 29,836 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Percent under age 18}}\strut}} &  &  & 30.0\% & 22.0\% & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Population ages 18+}}\strut}} &  &  & 11,137 & 105,900 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Percent ages 18+}}\strut}} &  &  & 70.0\% & 78.0\% & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Population ages 65+}}\strut}} &  &  & 1,702 & 14,630 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Percent ages 65+}}\strut}} &  &  & 11.0\% & 11.0\% & \multicolumn{1}{l}{}  \\ 
+
+\end{tabular}
+\setlength{\tabcolsep}{6pt} % put back to default
+
+
+\vspace{12pt}
+\setlength{\tabcolsep}{.01in} % No buffers between columns, so we'll use parboxes to keep stuff separated
+\rowcolors{2}{LtGray}{white}
+\begin{tabular}{p{.10in}p{.10in}p{.10in}p{3.7in}>{\hfill}p{.85in}>{\hfill}p{.85in}>{\hfill}p{.85in}>{\hfill}p{.85in}p{0.1in}}
+\multicolumn{9}{l}{\parbox{7.1in}{\raggedright{\large{\strut\textbf{RACE AND ETHNICITY\endnote{U.S. Census Bureau, American Community Survey 2022 5-year estimates}}\strut}}}} \\ 
+\hline
+\multicolumn{4}{l}{\parbox{3.5in}{\raggedright{\textbf{}}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{Hill}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{New \\ Haven}\strut}}} & \\ 
+\multicolumn{9}{l}{} \\ 
+\multicolumn{4}{l}{\parbox{3.5in}{\strut\raggedright{\textbf{Total population}\strut}}} & \textbf{} & \textbf{} & \textbf{15,818} & \textbf{135,736} & \textbf{} \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{White population}}\strut}} &  &  & 3,061 & 43,696 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Percent white}}\strut}} &  &  & 19.0\% & 32.0\% & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Black population}}\strut}} &  &  & 3,785 & 38,040 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Percent Black}}\strut}} &  &  & 24.0\% & 28.0\% & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Latino population}}\strut}} &  &  & 7,670 & 41,631 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Percent Latino}}\strut}} &  &  & 48.0\% & 31.0\% & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Other race population}}\strut}} &  &  & 1,300 & 12,369 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Percent other race\endnote{U.S. Census Bureau, American Community Survey 2022 5-year estimates}}}\strut}} &  &  & 8.0\% & 9.0\% & \multicolumn{1}{l}{}  \\ 
+
+\end{tabular}
+\setlength{\tabcolsep}{6pt} % put back to default
+
+
+\newpage
+\setlength{\tabcolsep}{.01in} % No buffers between columns, so we'll use parboxes to keep stuff separated
+\rowcolors{2}{LtGray}{white}
+\begin{tabular}{p{.10in}p{.10in}p{.10in}p{3.7in}>{\hfill}p{.85in}>{\hfill}p{.85in}>{\hfill}p{.85in}>{\hfill}p{.85in}p{0.1in}}
+\multicolumn{9}{l}{\parbox{7.1in}{\raggedright{\large{\strut\textbf{FOREIGN BORN}\strut}}}} \\ 
+\hline
+\multicolumn{4}{l}{\parbox{3.5in}{\raggedright{\textbf{}}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{Hill}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{New \\ Haven}\strut}}} & \\ 
+\multicolumn{9}{l}{} \\ 
+\multicolumn{4}{l}{\parbox{3.5in}{\strut\raggedright{\textbf{Total population}\strut}}} & \textbf{} & \textbf{} & \textbf{15,818} & \textbf{135,736} & \textbf{} \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Foreign-born population}}\strut}} &  &  & 4,577 & 23,754 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Percent foreign-born}}\strut}} &  &  & 29.0\% & 18.0\% & \multicolumn{1}{l}{}  \\ 
+
+\end{tabular}
+\setlength{\tabcolsep}{6pt} % put back to default
+
+
+\vspace{12pt}
+\setlength{\tabcolsep}{.01in} % No buffers between columns, so we'll use parboxes to keep stuff separated
+\rowcolors{2}{LtGray}{white}
+\begin{tabular}{p{.10in}p{.10in}p{.10in}p{3.7in}>{\hfill}p{.85in}>{\hfill}p{.85in}>{\hfill}p{.85in}>{\hfill}p{.85in}p{0.1in}}
+\multicolumn{9}{l}{\parbox{7.1in}{\raggedright{\large{\strut\textbf{HOUSING\endnote{U.S. Census Bureau, American Community Survey 2022 5-year estimates}}\strut}}}} \\ 
+\hline
+\multicolumn{4}{l}{\parbox{3.5in}{\raggedright{\textbf{}}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{Hill}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{New \\ Haven}\strut}}} & \\ 
+\multicolumn{9}{l}{} \\ 
+\multicolumn{4}{l}{\parbox{3.5in}{\strut\raggedright{\textbf{Total households}\strut}}} & \textbf{} & \textbf{} & \textbf{5,378} & \textbf{52,977} & \textbf{} \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Owner-occupied households}}\strut}} &  &  & 1,449 & 15,168 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Homeownership rate}}\strut}} &  &  & 27.0\% & 29.0\% & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Cost-burdened households}}\strut}} &  &  & 3,023 & 25,128 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Cost-burden rate}}\strut}} &  &  & 59.0\% & 49.0\% & \multicolumn{1}{l}{}  \\ 
+
+\end{tabular}
+\setlength{\tabcolsep}{6pt} % put back to default
+
+
+\vspace{12pt}
+\setlength{\tabcolsep}{.01in} % No buffers between columns, so we'll use parboxes to keep stuff separated
+\rowcolors{2}{LtGray}{white}
+\begin{tabular}{p{.10in}p{.10in}p{.10in}p{3.7in}>{\hfill}p{.85in}>{\hfill}p{.85in}>{\hfill}p{.85in}>{\hfill}p{.85in}p{0.1in}}
+\multicolumn{9}{l}{\parbox{7.1in}{\raggedright{\large{\strut\textbf{POVERTY AND LOW INCOME\endnote{U.S. Census Bureau, American Community Survey 2022 5-year estimates}}\strut}}}} \\ 
+\hline
+\multicolumn{4}{l}{\parbox{3.5in}{\raggedright{\textbf{}}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{Hill}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{New \\ Haven}\strut}}} & \\ 
+\multicolumn{9}{l}{} \\ 
+\multicolumn{4}{l}{\parbox{3.5in}{\strut\raggedright{\textbf{Poverty status known}\strut}}} & \textbf{} & \textbf{} & \textbf{15,330} & \textbf{126,367} & \textbf{} \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Population in poverty}}\strut}} &  &  & 4,698 & 31,927 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Poverty rate}}\strut}} &  &  & 31.0\% & 25.0\% & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Low-income population}}\strut}} &  &  & 9,002 & 58,284 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Low-income rate}}\strut}} &  &  & 59.0\% & 46.0\% & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.5in}{\strut\raggedright{\textbf{Under 18, poverty status known}\strut}}} & \textbf{} & \textbf{} & \textbf{4,612} & \textbf{29,348} & \textbf{} \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Children in poverty}}\strut}} &  &  & 1,643 & 10,536 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Child poverty rate}}\strut}} &  &  & 36.0\% & 36.0\% & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Low-income children}}\strut}} &  &  & 3,324 & 18,336 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Child low-income rate}}\strut}} &  &  & 72.0\% & 62.0\% & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.5in}{\strut\raggedright{\textbf{Ages 65+, poverty status known}\strut}}} & \textbf{} & \textbf{} & \textbf{1,555} & \textbf{14,180} & \textbf{} \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Seniors in poverty}}\strut}} &  &  & 466 & 2,695 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Senior poverty rate}}\strut}} &  &  & 30.0\% & 19.0\% & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Low-income seniors}}\strut}} &  &  & 900 & 6,307 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Senior low-income rate}}\strut}} &  &  & 58.0\% & 44.0\% & \multicolumn{1}{l}{}  \\ 
+
+\end{tabular}
+\setlength{\tabcolsep}{6pt} % put back to default
+
+
+\newpage
+\setlength{\tabcolsep}{.01in} % No buffers between columns, so we'll use parboxes to keep stuff separated
+\rowcolors{2}{LtGray}{white}
+\begin{tabular}{p{.10in}p{.10in}p{.10in}p{3.7in}>{\hfill}p{.85in}>{\hfill}p{.85in}>{\hfill}p{.85in}>{\hfill}p{.85in}p{0.1in}}
+\multicolumn{9}{l}{\parbox{7.1in}{\raggedright{\large{\strut\textbf{HEALTH}\strut}}}} \\ 
+\hline
+\multicolumn{4}{l}{\parbox{3.5in}{\raggedright{\textbf{}}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{Hill}\strut}}} & \multicolumn{1}{r}{\parbox{.85in}{\strut\raggedleft{\textbf{New \\ Haven}\strut}}} & \\ 
+\multicolumn{9}{l}{} \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Life expectancy in years\endnote{U.S. Small-Area Life Expectancy Estimates Project (USALEEP): Life Expectancy Estimates File for Connecticut, 2010-2015}}}\strut}} &  &  & 75.9 & 78.2 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Percent adults with coronary heart disease\endnote{Data are for 2021}}}\strut}} &  &  & 6.5\% & 4.8\% & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Current asthma rate (adults)\endnote{Data are for 2021}}}\strut}} &  &  & 13.4\% & 12.5\% & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Diabetes rate (adults)\endnote{Data are for 2021}}}\strut}} &  &  & 0.17 & 0.12 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Percent adults with high blood pressure\endnote{Data are for 2021}}}\strut}} &  &  & 36.2\% & 30.8\% & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Percent adults with any disability\endnote{Data are for 2021}}}\strut}} &  &  & 39.3\% & 30.1\% & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Percent adults with mobility disability\endnote{Data are for 2021}}}\strut}} &  &  & 19.5\% & 13.5\% & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Annual checkup rate (adults)\endnote{Data are for 2021}}}\strut}} &  &  & 0.74 & 0.74 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Annual dental visit rate (adults)\endnote{Data are for 2020}}}\strut}} &  &  & 0.48 & 0.59 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Ages 18-64, no health insurance\endnote{Data are for 2021}}}\strut}} &  &  & 22.7\% & 13.6\% & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Current smoking rate (adults)\endnote{Data are for 2021}}}\strut}} &  &  & 0.24 & 0.18 & \multicolumn{1}{l}{}  \\ 
+\multicolumn{4}{l}{\parbox{3.6in}{\strut\raggedright{{Percent adults sleeping under 7 hours daily\endnote{Data are for 2020}}}\strut}} &  &  & 43.4\% & 40.2\% & \multicolumn{1}{l}{}  \\ 
+
+\end{tabular}
+\setlength{\tabcolsep}{6pt} % put back to default
+
+
+\vspace{36pt}
+\linespread{1.5}
+\theendnotes
+\end{document}
