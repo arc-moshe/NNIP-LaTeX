@@ -1,0 +1,66 @@
+.-
+help for ^latable^
+.-
+
+LaTable: Simplifies creation of LaTeX tables for data factsheets 
+----------------------------------------
+
+^latable^ ^using^ ^,^ ^table^(string) ^n^(numlist integer) [rowcolors(string)] 
+[year(numlist integer)] [year1(numlist integer)] [year2(numlist integer)] 
+[release(numlist integer)] [printdate(string)] [geounit(string)] [geo1(string)] [geo2(string)]
+
+Description
+-----------
+
+^latable^ simplifies the creation of data factsheets in LaTeX by ensuring that data elements are 
+formatted as desired (e.g., numbers taken to the correct number of decimal places) and wrapped with 
+code to create tables with the necessary formatting (e.g., indentation to show heirarchy of categories).
+
+latable requires Stata 16 or higher, as it requires two dataframes in memory at once: one with the 
+table specs, the other with the data themselves.
+
+Options
+--------
+
+Required options (an oxymoron, I know)
+
+	^using^ provides the path to the file containing the table specs. The table spec file 
+	(see sample) provides information such as what data element occupies each cell and how
+	that data element should be formatted.
+	
+	^n^ identifies the observation for which the data are to be reported.
+
+Optional options:
+
+	^rowcolors^ defines color(s) to be used for table rows, which allows for interleaving of 
+	row colors. The row background will be white if this option is not specified.
+	
+	^year^ is required if the table specs are year-agnostic but the data fields have the year 
+	appended to their names. 
+	
+	^year1^ and ^year2^ support cases where the same field exists for multiple time points, 
+	in wide format e.g., when creating a table that compares two time points
+	
+	^release^ can be used to differentiate 1-year from 5-year ACS data
+	
+	^printdate^ defines how date information should appear in the table header row (if desired).
+	For example, "2025-26 School Year" 
+	
+	^geounit^ should be used in conjunction with `geounit' in the table specifications. For 
+	example, a job flows table might want to say "County residents employed within the County"
+	
+	^geo1^ and ^geo2^ are useful when creating a table comparing two geographies. For example, 
+	if comparing a neighborhood to the city as a whole, geo1 would take the neighborhood name
+	and geo2 would take a value like "Gotham Citywide"
+	
+	
+
+
+
+Author
+------
+
+mhaspel@@atlantaregional.org
+
+
+
